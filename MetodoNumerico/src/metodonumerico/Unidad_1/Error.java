@@ -1,13 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package metodonumerico.Unidad_1;
 
-/**
- *
- * @author Lucas Belmonte
- */
-public class Error {
+
+public abstract class Error {
+    
+    /* 
+        Metodo para calcular el error´porcentual de un valor con respecto al valor dela iteración anterior.
+        Este metodo sirve para determinar si un metodo iterativo se encuentra serca del estancamiento.
+    */
+    public static Double errorRelativoPorcentual(Double x0, Double x1){
+        return Math.abs((x0 - x1)/x0) * 100;
+    }
+    
+    
+    public static Double errorTotalPorcentual(Double xVerdadero, Double xAproximado){
+        return (xVerdadero - xAproximado) * 100;
+    }
     
 }
