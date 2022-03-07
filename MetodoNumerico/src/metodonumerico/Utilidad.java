@@ -8,7 +8,6 @@ import Jama.*;
 
 public abstract class Utilidad {
       
-    static final String texto_Error_Funcion = "Error: La resolución de una función no devolvió un numero %n Se recomienda revisra si la función se ingresó correctamente";    
     
     public static Double funcionX(String stringFuncion, Double X){
         
@@ -18,7 +17,7 @@ public abstract class Utilidad {
         if (resultado.isNaN() || resultado.isInfinite()) {
             System.out.println("FUNCIÓN -> " + stringFuncion);
             System.out.println("PARAMETRO -> " + X);
-            System.out.printf(texto_Error_Funcion);
+            System.out.printf(Mensajes.errorProcesadoFuncion);
         }
        
         return resultado;
@@ -34,7 +33,7 @@ public abstract class Utilidad {
             System.out.println("FUNCIÓN -> " + stringFuncion);
             System.out.println("PARAMETRO X -> " + X);
             System.out.println("PARAMETRO Y -> " + Y);
-            System.out.printf(texto_Error_Funcion);
+            System.out.printf(Mensajes.errorProcesadoFuncion);
         }
         
         return resultado;
